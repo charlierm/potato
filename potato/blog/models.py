@@ -14,6 +14,7 @@ class Post(models.Model):
     date_modified = models.DateTimeField(auto_now=True)
     created_by = models.ForeignKey(User, related_name='posts_created')
     modified_by = models.ForeignKey(User, related_name='posts_modified')
+    tags = models.ManyToManyField('Tag', related_name='posts')
 
     def save(self, *args, **kwargs):
         self.slug = defaultfilters.slugify(self.title)
@@ -21,4 +22,8 @@ class Post(models.Model):
 
     def __unicode__(self):
         return "<Post: {0}>".format(self.title[0:50])
+
+
+class Tag(models.Model):
+    title = models.CharField(max_length=30, primary_key=True)
 
