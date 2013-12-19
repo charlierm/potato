@@ -36,6 +36,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #Custom Apps
+    'blog',
 )
 
 #Set up any debug apps/extensions
@@ -43,6 +45,7 @@ INSTALLED_APPS = (
 if DEBUG:
     DEBUG_APPS = (
         'django_extensions',
+        'south',
     )
     INSTALLED_APPS = INSTALLED_APPS + DEBUG_APPS
 
@@ -91,3 +94,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+
+#Security
+PASSWORD_HASHERS = (
+    'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+    'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
+    'django.contrib.auth.hashers.SHA1PasswordHasher',
+    'django.contrib.auth.hashers.MD5PasswordHasher',
+    'django.contrib.auth.hashers.CryptPasswordHasher',
+)
