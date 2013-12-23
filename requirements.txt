@@ -4,3 +4,4 @@ django-extensions
 south
 pygments
 werkzeug
+django-debug-toolbar

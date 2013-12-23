@@ -1,0 +1,28 @@
+{% extends "blog/base.html" %}
+
+{% block title %}
+Computerbacon
+{% endblock %}
+
+
+{% block header %}
+{% endblock %}
+
+
+{% block content %}
+<header class="title">
+	<a href="{% url 'home' %}" class="btn btn-default btn" id="back-button" role="button"><span class="glyphicon glyphicon-chevron-left"></span>     Back   </a>
+	<h2>{{ object.title }}</h2>
+	<p>{{ object.date_created }} - Posted by: {{ object.created_by.username }}</p>
+	
+</header>
+
+<div class="post">
+    <div class="row">
+      <div class="col-md-12">
+        {{ object.rendered|safe }}
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

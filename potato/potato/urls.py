@@ -9,6 +9,6 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'potato.views.home', name='home'),
-    url(r'^$', include('blog.urls')), #Include blog URLS
+    url(r'', include('blog.urls')), #Include blog URLS
     url(r'^admin/', include(admin.site.urls)),
 ) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
