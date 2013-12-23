@@ -7,6 +7,20 @@ h2{
     font-size: 31.5px;
 }
 
+.post h2 a{
+    color: #333333;
+}
+
+.post h2 a:hover{
+    color: #CC6600;
+    text-decoration:none;
+}
+
+a:hover{
+    color: #CC6600;
+    text-decoration:none;
+}
+
 .container{
     max-width: 800px;
 }
@@ -23,6 +37,23 @@ header h1{
     font-size: 172px;
     line-height: 182px;
     text-indent: -10px;
+}
+
+header.title{
+    padding-top: 150px;
+}
+
+header.title h2{
+    font-size: 60px;
+    line-height: 72px;
+    font-weight: bold;
+    color: #555;
+}
+
+header.title p{
+    font-size: 14px;
+    color: #7c7c7c;
+    line-height: 24px;
 }
 
 header p{
@@ -56,6 +87,13 @@ header p{
     border-color: #dedede;
     border-bottom-style: solid;
     box-shadow: 0 1px 0 #fff;
+    font-size: 16px;
+    color: #555;
+}
+
+.post img{
+    width: 100%;
+    border-radius:7px;
 }
 
 .post p{
@@ -87,6 +125,7 @@ header p{
 /* Set the fixed height of the footer here */
 .footer{
     height: 100px;
+    width: 100%;
     background-color: #FFFFFF;
     border-top: 1px;
     border-color: #dedede;
@@ -97,9 +136,24 @@ pre{
     background-color: #3F3F3F;
     color: #DCDCDC;
     border-width: 0;
-    border-radius: 8px;
+    border-radius: 7px;
     font-family: 'Droid Sans Mono', sans-serif;
-    font-size: 15px;
+    font-size: 14px;
+}
+
+.label{
+    font-size: 50%;
+    text-align: center;
+    font-weight: normal;
+    vertical-align: middle;
+}
+
+#back-button{
+    background-color: #CC6600;
+    color: #FFFFFF;
+    width: 80px;
+    vertical-align: middle;
+    display: table-cell;
 }
 
 @media (max-width: 480px){
@@ -129,3 +183,19 @@ pre{
         line-height: 90px;
     }
 }
+
+html, body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto;
+  /* Negative indent footer by its height */
+  margin: 0 auto -100px;
+  /* Pad bottom by footer height */
+  padding: 0 0 100px;
+}
+
