@@ -1,4 +1,5 @@
 {% extends "blog/base.html" %}
+{% load humanize %}
 
 {% block title %}
 Computerbacon
@@ -20,6 +21,7 @@ Computerbacon
     <div class="row">
       <div class="col-md-12">
         <h2><a href="{{ post.get_absolute_url }}">{{ post.title }} </a> <span class="label label-default" style="background-color: #CC6600;">Recent</span></h2>
+        <p class="post-subtitle">{{ post.date_created|naturaltime }}</p>
         {{ post.rendered|safe|truncatewords_html:100 }}
       </div>
     </div>

@@ -36,8 +36,10 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',
     #Custom Apps
     'blog',
+    'bootstrapform',
 )
 
 #Set up any debug apps/extensions

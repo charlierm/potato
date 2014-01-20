@@ -6,6 +6,9 @@ Computerbacon
 
 
 {% block header %}
+{% if user.is_authenticated %}
+{{user.username}}
+{% endif %}
 {% endblock %}
 
 
@@ -24,5 +27,7 @@ Computerbacon
       </div>
     </div>
   </div>
+
+  <div class="pagination"></div>
 
 {% endblock %}

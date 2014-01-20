@@ -1,0 +1,21 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+<form class="form-signin" role="form" action="" method="post">{% csrf_token %}
+
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <input type="text" class="form-control" placeholder="Email address" name="username" required autofocus>
+        <input type="password" class="form-control" placeholder="Password" name="password" required>
+        <label class="checkbox">
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+        <button class="btn btn-lg btn-default btn-block ginger-bg" type="submit" style="color: #FFFFFF;">Sign in</button>
+      </form>
+{% endblock %}

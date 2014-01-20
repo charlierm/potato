@@ -61,6 +61,10 @@ header p{
     color: #999;
 }
 
+.post-subtitle{
+    color: #999 !important;
+}
+
 .nav{
     /*background-color: #CC6600;*/
     background-color: rgba(204,102,0,0.95);
@@ -81,6 +85,14 @@ header p{
     color: #CC6600;
 }
 
+.ginger-bg{
+    background-color: #CC6600;
+}
+
+.ginger-bg:hover{
+    background-color: #CC6600;
+}
+
 .post{
     padding: 50px;
     border-bottom: 1px;
@@ -91,15 +103,32 @@ header p{
     color: #555;
 }
 
+.post ul{
+    padding-bottom: 30px;
+}
+
+.post li{
+    line-height: 1.8;
+}
+
+.post.borderless{
+    border-bottom: 0;
+}
+
 .post img{
+    margin-top: 15px;
+    margin-bottom: 15px;
     width: 100%;
     border-radius:7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
 }
 
 .post p{
     font-size: 16px;
     line-height: 26px;
     color: #555;
+    margin-bottom: 30px;
 
 }
 
@@ -111,10 +140,12 @@ header p{
     text-align: center;
     width: 100%;
     padding-top: 30px;
+    max-width: 330px;
+    margin: 0 auto;
 }
 
 .share li{
-    padding: 0 30px;
+    padding: 0 20px;
     
 }
 
@@ -139,6 +170,13 @@ pre{
     border-radius: 7px;
     font-family: 'Droid Sans Mono', sans-serif;
     font-size: 14px;
+    margin-bottom: 30px;
+}
+
+div.footnotes, .footnotes p{
+    color: #999;
+    font-size: 16px;
+    margin-bottom: 0;
 }
 
 .label{
@@ -197,5 +235,43 @@ html, body {
   margin: 0 auto -100px;
   /* Pad bottom by footer height */
   padding: 0 0 100px;
+}
+
+/*Login Stuff*/
+.form-signin {
+    padding: 15px;
+    padding-top: 100px;
+  max-width: 330px;
+  
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="text"] {
+  margin-bottom: -1px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
